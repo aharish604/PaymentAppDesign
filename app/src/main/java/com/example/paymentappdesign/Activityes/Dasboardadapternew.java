@@ -1,4 +1,4 @@
-package com.example.paymentappdesign.Adapter;
+package com.example.paymentappdesign.Activityes;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,18 +7,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.paymentappdesign.Adapter.ItemsAdapter;
 import com.example.paymentappdesign.R;
+public class Dasboardadapternew extends RecyclerView.Adapter<Dasboardadapternew.myViewHolder> {
 
-public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.myViewHolder> {
     @NonNull
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.card_item3, parent, false);
+                .inflate(R.layout.card_item4, parent, false);
 
         myViewHolder myViewHolder = new myViewHolder(view);
-        return myViewHolder;
-    }
+        return myViewHolder;    }
 
     @Override
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
@@ -27,7 +27,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.myViewHolder
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 3;
     }
 
     public class myViewHolder extends RecyclerView.ViewHolder {
@@ -36,3 +36,4 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.myViewHolder
         }
     }
 }
+

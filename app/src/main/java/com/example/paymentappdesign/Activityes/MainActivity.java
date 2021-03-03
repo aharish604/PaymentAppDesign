@@ -26,14 +26,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
+        setContentView(R.layout.mainlayout);
         getSupportActionBar().hide();
         getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.BLUE));
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.BLUE));
 
 
 
-       DashboardAdapter adapter = new DashboardAdapter(names, MainActivity.this);
+    /*   DashboardAdapter adapter = new DashboardAdapter(names, MainActivity.this);
         ViewPager viewPager=findViewById(R.id.recycer_View);
         viewPager.setAdapter(adapter);
         viewPager.setPadding(50, 10, 50, 10);
@@ -54,6 +55,23 @@ public class MainActivity extends AppCompatActivity {
 
            }
        });
+
+*/
+
+    RecyclerView mRecyclerView=findViewById(R.id.recycer_View);
+    RecyclerView recycer_View2=findViewById(R.id.recycer_View2);
+
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
+
+        mRecyclerView.setAdapter(new ItemsAdapter());
+
+
+
+        recycer_View2.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+        recycer_View2.setAdapter(new Dasboardadapternew());
+
+
 
 
         ImageButton btn=findViewById(R.id.logOutB);
